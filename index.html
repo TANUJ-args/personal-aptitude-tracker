@@ -1,0 +1,4294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Study Planner - 3 Month Placement Prep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Embedded CSS from style.css */
+        :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* RGB versions for opacity control (dark mode) */
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  /* Colorful background palette - Dark Mode */
+  --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+  --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+  --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+  --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+  --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+  --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+  --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+  --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+  /* Semantic Color Tokens (Dark Mode) */
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  /* RGB versions for dark mode */
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  /* RGB versions for opacity control (light mode) */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* RGB versions for light mode */
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin: 0 0 var(--space-16) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size-base) * 0.95);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+}
+
+code {
+  padding: var(--space-1) var(--space-4);
+}
+
+pre {
+  padding: var(--space-16);
+  margin: var(--space-16) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--secondary:active {
+  background: var(--color-secondary-active);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-secondary);
+}
+
+.btn--sm {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: var(--space-10) var(--space-20);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+select.form-control {
+  padding: var(--space-8) var(--space-12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+/* Add a dark mode specific caret */
+@media (prefers-color-scheme: dark) {
+  select.form-control {
+    background-image: var(--select-caret-dark);
+  }
+}
+
+/* Also handle data-color-scheme */
+[data-color-scheme="dark"] select.form-control {
+  background-image: var(--select-caret-dark);
+}
+
+[data-color-scheme="light"] select.form-control {
+  background-image: var(--select-caret-light);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.card__header,
+.card__footer {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+/* Status indicators - simplified with CSS variables */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.status--success {
+  background-color: rgba(
+    var(--color-success-rgb, 33, 128, 141),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-success);
+  border: 1px solid
+    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+}
+
+.status--error {
+  background-color: rgba(
+    var(--color-error-rgb, 192, 21, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-error);
+  border: 1px solid
+    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+}
+
+.status--warning {
+  background-color: rgba(
+    var(--color-warning-rgb, 168, 75, 47),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-warning);
+  border: 1px solid
+    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+}
+
+.status--info {
+  background-color: rgba(
+    var(--color-info-rgb, 98, 108, 113),
+    var(--status-bg-opacity)
+  );
+  color: var(--color-info);
+  border: 1px solid
+    rgba(var(--color-info-rgb, 98, 108, 113), var(--status-border-opacity));
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-16);
+  padding-left: var(--space-16);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.m-0 {
+  margin: 0;
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mx-8 {
+  margin-left: var(--space-8);
+  margin-right: var(--space-8);
+}
+.my-8 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.p-0 {
+  padding: 0;
+}
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Dark mode specifics */
+[data-color-scheme="dark"] .btn--outline {
+  border: 1px solid var(--color-border-secondary);
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16) 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.logo i {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+}
+
+.logo h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.main-nav {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.nav-btn {
+  padding: var(--space-8) var(--space-16);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.nav-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.nav-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+  
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--space-6) var(--space-12);
+  }
+}
+
+/* Main Content */
+.main-content {
+  min-height: calc(100vh - 80px);
+}
+
+.section {
+  display: none;
+  padding: var(--space-32) 0;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: var(--space-32);
+}
+
+.dashboard-header h2 {
+  margin-bottom: var(--space-8);
+}
+
+.current-date {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-1);
+  border-radius: var(--radius-base);
+}
+
+.stat-icon i {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+}
+
+.stat-info h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+}
+
+.stat-info p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Progress Bar - Reconstructed */
+.progress-bar {
+  position: relative;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  height: 20px;
+  overflow: visible;
+  margin: var(--space-8) 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+  width: 0%;
+  max-width: 100% !important;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.progress-text {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  z-index: 10;
+  line-height: 20px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+.study-settings {
+  margin-bottom: var(--space-24);
+}
+
+.date-picker {
+  padding: 10px 15px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.date-picker:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.update-date-btn {
+  padding: 10px 20px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.update-date-btn:hover {
+  background: var(--color-teal-500);
+  transform: translateY(-1px);
+}
+
+.update-date-btn:active {
+  transform: translateY(0);
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.reset-btn:hover {
+  background: #dc2626 !important;
+  transform: translateY(-1px);
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+}
+
+.overall-progress {
+  margin-bottom: var(--space-32);
+}
+
+.overall-progress h3 {
+  margin-bottom: var(--space-16);
+}
+
+/* Quote Card */
+.quote-card {
+  text-align: center;
+  padding: var(--space-24);
+  background: var(--color-bg-2);
+  margin-bottom: var(--space-32);
+}
+
+.quote-icon {
+  margin-bottom: var(--space-16);
+}
+
+.quote-icon i {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+}
+
+.quote-card p {
+  font-size: var(--font-size-xl);
+  font-style: italic;
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* Weeks Grid */
+.weeks-grid h3 {
+  margin-bottom: var(--space-16);
+}
+
+.weeks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-16);
+}
+
+/* Responsive: ensure 3 columns on tablets/laptops */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .weeks-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive: 4 columns on larger screens */
+@media (min-width: 1280px) {
+  .weeks-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive: 2 columns on smaller tablets */
+@media (min-width: 640px) and (max-width: 767px) {
+  .weeks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 639px) {
+  .weeks-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.week-card {
+  padding: var(--space-16);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  background-color: var(--color-surface);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.week-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.week-card.current {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-1);
+}
+
+.week-card.completed {
+  border-color: var(--color-success);
+  background-color: var(--color-bg-3);
+}
+
+.week-card.in-progress {
+  border-color: var(--color-warning);
+  background-color: var(--color-bg-2);
+}
+
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.week-number {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.week-status {
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.week-status.completed {
+  background-color: var(--color-bg-3);
+  color: var(--color-success);
+}
+
+.week-status.current {
+  background-color: var(--color-bg-1);
+  color: var(--color-primary);
+}
+
+.week-status.upcoming {
+  background-color: var(--color-secondary);
+  color: var(--color-text-secondary);
+}
+
+.week-theme {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-12);
+}
+
+.week-dates {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+/* Current Week Highlight */
+.current-week-highlight {
+  background: var(--color-bg-1);
+  border: 1px solid var(--color-primary);
+}
+
+.current-week-highlight h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-16);
+}
+
+/* Weekly View Styles */
+.weekly-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-32);
+}
+
+.week-nav-btn {
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-secondary);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+  color: var(--color-text);
+}
+
+.week-nav-btn:hover {
+  background: var(--color-secondary-hover);
+}
+
+.week-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.week-title {
+  text-align: center;
+}
+
+.week-title h2 {
+  margin-bottom: var(--space-8);
+}
+
+.week-title p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .weekly-header {
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+}
+
+.week-progress {
+  margin-bottom: var(--space-24);
+}
+
+.week-progress h3 {
+  margin-bottom: var(--space-16);
+}
+
+.weekly-quote {
+  text-align: center;
+  font-style: italic;
+  background: var(--color-bg-2);
+  margin-bottom: var(--space-32);
+}
+
+.weekly-quote p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+/* Daily Tasks */
+.daily-tasks h3 {
+  margin-bottom: var(--space-16);
+}
+
+#daily-tasks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-16);
+}
+
+/* Responsive: ensure 3 columns on tablets/laptops */
+@media (min-width: 768px) and (max-width: 1279px) {
+  #daily-tasks-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive: 4 columns on larger screens */
+@media (min-width: 1280px) {
+  #daily-tasks-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive: 2 columns on smaller tablets */
+@media (min-width: 640px) and (max-width: 767px) {
+  #daily-tasks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 639px) {
+  #daily-tasks-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.daily-task {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-16);
+  transition: all var(--duration-normal) var(--ease-standard);
+  cursor: pointer;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.daily-task:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.daily-task.completed {
+  background-color: var(--color-bg-3);
+  border-color: var(--color-success);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+
+.task-date {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.day-number {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.date-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.task-hours {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  background-color: var(--color-secondary);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-sm);
+}
+
+.task-content {
+  margin-bottom: var(--space-12);
+}
+
+.task-topics {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+}
+
+.task-actions {
+  display: flex;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.task-notes {
+  flex: 1;
+  padding: var(--space-6) var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.task-notes:focus {
+  outline: var(--focus-outline);
+  border-color: var(--color-primary);
+}
+
+/* Formula Reference Styles */
+.formulas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-32);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding-right: var(--space-32);
+  width: 300px;
+}
+
+.search-box i {
+  position: absolute;
+  right: var(--space-12);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .formulas-header {
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+  
+  .search-box input {
+    width: 100%;
+  }
+}
+
+.formulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-16);
+}
+
+.formula-category h3 {
+  margin-bottom: var(--space-16);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: var(--space-8);
+}
+
+.formula-item {
+  background-color: var(--color-bg-1);
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-8);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  border-left: 3px solid var(--color-primary);
+}
+
+.formula-item.hidden {
+  display: none;
+}
+
+/* Progress Tracker Styles */
+.subject-progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.subject-card {
+  text-align: center;
+}
+
+.subject-card h3 {
+  margin-bottom: var(--space-16);
+}
+
+/* Weak Areas Styles */
+.weak-areas-intro {
+  background: var(--color-bg-2);
+  margin-bottom: var(--space-24);
+}
+
+.topics-rating h3 {
+  margin-bottom: var(--space-16);
+}
+
+.topic-rating-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-16);
+  margin-bottom: var(--space-8);
+}
+
+.topic-name {
+  font-weight: var(--font-weight-medium);
+}
+
+.rating-stars {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.star {
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  color: var(--color-secondary);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.star.active,
+.star:hover {
+  color: var(--color-warning);
+}
+
+.flagged-topics {
+  margin-top: var(--space-24);
+}
+
+.flagged-topic {
+  background-color: var(--color-bg-4);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-base);
+  padding: var(--space-12) var(--space-16);
+  margin-bottom: var(--space-8);
+}
+
+.flagged-topic-name {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-error);
+  margin-bottom: var(--space-4);
+}
+
+.flagged-topic-suggestion {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.no-weak-areas {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Mock Tests Styles */
+.mock-tests-intro {
+  background: var(--color-bg-1);
+  margin-bottom: var(--space-32);
+  text-align: center;
+  padding: var(--space-24);
+}
+
+/* Enhanced Practice Tests Styles */
+.practice-tests-section,
+.full-mock-tests-section {
+  margin-top: var(--space-32);
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+
+.practice-tests-section h2,
+.full-mock-tests-section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-24);
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom: var(--space-12);
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-16);
+}
+
+.test-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.test-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(33, 128, 141, 0.2);
+  transform: translateY(-3px);
+}
+
+.test-card h3 {
+  color: var(--color-text);
+  margin-bottom: var(--space-12);
+  font-size: var(--font-size-lg);
+}
+
+.test-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-16);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.test-difficulty {
+  display: inline-block;
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-12);
+}
+
+.test-difficulty.easy {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-teal-300);
+}
+
+.test-difficulty.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-orange-500);
+}
+
+.test-difficulty.hard {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-red-400);
+}
+
+/* Test Interface Styles */
+#test-interface {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  margin-top: var(--space-24);
+}
+
+.test-header-bar {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.test-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+
+.test-header-info h2 {
+  margin: 0;
+  color: var(--color-surface);
+}
+
+.btn-exit {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--color-surface);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.btn-exit:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.test-meta-info {
+  display: flex;
+  gap: var(--space-24);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.timer-display {
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-sm);
+}
+
+.progress-display {
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-sm);
+}
+
+.test-content-area {
+  padding: var(--space-32);
+}
+
+.question-container {
+  background: var(--color-surface);
+  padding: var(--space-24);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-24);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.question-container strong {
+  color: var(--color-primary);
+}
+
+.options-container {
+  display: grid;
+  gap: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+.option-item {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  padding: var(--space-16) var(--space-20);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  font-size: var(--font-size-base);
+}
+
+.option-item:hover {
+  border-color: var(--color-primary);
+  background: rgba(33, 128, 141, 0.05);
+}
+
+.option-item.selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.option-item.marked-review {
+  border-color: var(--color-orange-500);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.test-navigation {
+  display: flex;
+  gap: var(--space-16);
+  justify-content: space-between;
+}
+
+.btn-nav,
+.btn-mark,
+.btn-submit {
+  flex: 1;
+  padding: var(--space-16);
+  font-size: var(--font-size-base);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.btn-nav {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn-mark {
+  background: var(--color-orange-400);
+  color: var(--color-surface);
+}
+
+.btn-submit {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-nav:hover,
+.btn-mark:hover,
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Test Results Styles */
+#test-results-page {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-40);
+  margin-top: var(--space-24);
+}
+
+.results-wrapper {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results-wrapper h1 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-32);
+}
+
+.score-summary {
+  margin: var(--space-32) 0;
+}
+
+.score-circle-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-teal-300));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-24);
+  box-shadow: 0 8px 24px rgba(33, 128, 141, 0.3);
+}
+
+.score-circle-large span {
+  font-size: 48px;
+  font-weight: var(--font-weight-black);
+  color: var(--color-surface);
+}
+
+#performance-message {
+  color: var(--color-text);
+  margin-top: var(--space-16);
+}
+
+.results-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-24);
+  margin: var(--space-40) 0;
+}
+
+.result-stat {
+  text-align: center;
+  padding: var(--space-20);
+  background: var(--color-bg-1);
+  border-radius: var(--radius-base);
+}
+
+.result-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.result-value {
+  display: block;
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.results-buttons {
+  display: flex;
+  gap: var(--space-16);
+  justify-content: center;
+  margin-top: var(--space-32);
+}
+
+.results-buttons button {
+  padding: var(--space-16) var(--space-32);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+@media (max-width: 768px) {
+  .test-navigation {
+    flex-direction: column;
+  }
+  
+  .results-buttons {
+    flex-direction: column;
+  }
+  
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mb-16 {
+  margin-bottom: var(--space-16);
+}
+
+.mb-24 {
+  margin-bottom: var(--space-24);
+}
+
+.mt-16 {
+  margin-top: var(--space-16);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+  padding: var(--space-16);
+  margin-bottom: var(--space-16);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Enhanced Progress Bar Styles */
+.progress-section {
+  background: var(--color-surface);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-title-enhanced {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+/* Modern Gradient Progress Bar */
+.progress-bar-modern {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 16px 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.progress-fill-modern {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, #32B8C6 100%);
+  border-radius: 20px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill-modern::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+.progress-text-modern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text);
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Circular Progress */
+.circular-progress-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.circular-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.circular-progress svg {
+  transform: rotate(-90deg);
+  margin-bottom: 12px;
+}
+
+.circular-progress-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 8;
+}
+
+.circular-progress-fill {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circular-progress-text {
+  font-size: 28px;
+  font-weight: 700;
+  fill: var(--color-text);
+}
+
+.circular-progress-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.circular-progress-sublabel {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* Animated Milestone Progress */
+.milestone-progress {
+  position: relative;
+  padding: 40px 0;
+}
+
+.milestone-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e5e7eb;
+  transform: translateY(-50%);
+}
+
+.milestone-line-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-teal-300));
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.milestones {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.milestone-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 4px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.milestone.completed .milestone-icon {
+  background: var(--color-teal-300);
+  border-color: var(--color-teal-300);
+  color: white;
+  transform: scale(1.1);
+}
+
+.milestone.current .milestone-icon {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      box-shadow: 0 0 0 0 rgba(33, 128, 141, 0.4);
+  }
+  50% {
+      box-shadow: 0 0 0 10px rgba(33, 128, 141, 0);
+  }
+}
+
+.milestone-label {
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.milestone.completed .milestone-label,
+.milestone.current .milestone-label {
+  color: var(--color-text);
+}
+
+/* Stats Cards with Mini Progress */
+.stats-grid-enhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat-card-enhanced {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card-enhanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.stat-change {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.stat-change.positive {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-teal-300);
+}
+
+.stat-change.negative {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-red-400);
+}
+
+.mini-progress {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.mini-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+/* Weekly Heatmap Progress */
+.heatmap-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+}
+
+.heatmap-cell.level-0 {
+  background: #e5e7eb;
+  color: var(--color-text-secondary);
+}
+
+.heatmap-cell.level-1 {
+  background: #bfdbfe;
+}
+
+.heatmap-cell.level-2 {
+  background: #60a5fa;
+}
+
+.heatmap-cell.level-3 {
+  background: var(--color-primary);
+}
+
+.heatmap-cell.level-4 {
+  background: var(--color-teal-300);
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Chart Container */
+.chart-container-enhanced {
+  position: relative;
+  height: 300px;
+  margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .circular-progress-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .milestones {
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  
+  .heatmap-container {
+      grid-template-columns: repeat(6, 1fr);
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>Aptitude Study Planner</h1>
+                </div>
+                <nav class="main-nav">
+                    <button class="nav-btn active" data-section="dashboard">
+                        <i class="fas fa-home"></i> Dashboard
+                    </button>
+                    <button class="nav-btn" data-section="weekly">
+                        <i class="fas fa-calendar-week"></i> Weekly View
+                    </button>
+                    <button class="nav-btn" data-section="formulas">
+                        <i class="fas fa-book"></i> Formula Reference
+                    </button>
+                    <button class="nav-btn" data-section="progress">
+                        <i class="fas fa-chart-line"></i> Progress
+                    </button>
+                    <button class="nav-btn" data-section="weak-areas">
+                        <i class="fas fa-exclamation-triangle"></i> Weak Areas
+                    </button>
+                    <button class="nav-btn" data-section="mock-tests">
+                        <i class="fas fa-clipboard-check"></i> Mock Tests
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>Dashboard Overview</h2>
+                    <p class="current-date">Today: <span id="current-date"></span></p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-hours">0</h3>
+                            <p>Total Study Hours</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="completed-topics">0</h3>
+                            <p>Topics Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="days-remaining">84</h3>
+                            <p>Days Remaining</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="study-streak">0</h3>
+                            <p>Study Streak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Plan Settings -->
+                <div class="study-settings card">
+                    <h3>📅 Study Plan Settings</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <label for="start-date-picker" style="font-size: 14px; color: var(--color-text-secondary);">
+                            Set Your Start Date:
+                        </label>
+                        <input type="date" id="start-date-picker" class="date-picker" />
+                        <button onclick="updateStartDate()" class="update-date-btn">Update Start Date</button>
+                        <p style="font-size: 12px; color: var(--color-text-secondary); margin: 0;">
+                            Current Start Date: <strong id="current-start-date">Oct 22, 2025</strong>
+                        </p>
+                        <hr style="border: none; border-top: 1px solid var(--color-border); margin: 8px 0;">
+                        <button onclick="resetAllProgress()" class="reset-btn" style="background: #ef4444;">
+                            🔄 Reset All Progress
+                        </button>
+                        <p style="font-size: 11px; color: var(--color-text-secondary); margin: 0;">
+                            ⚠️ This will clear all completed tasks, notes, and test scores
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Overall Progress -->
+                <div class="overall-progress card">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="overall-progress"></div>
+                        <span class="progress-text" id="overall-progress-text">0%</span>
+                    </div>
+                </div>
+
+                <!-- Motivational Quote -->
+                <div class="quote-card card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p id="daily-quote">Discipline beats motivation — show up every day.</p>
+                </div>
+
+                <!-- Weekly Overview Grid -->
+                <div class="weeks-grid">
+                    <h3>12-Week Study Plan</h3>
+                    <div class="weeks-container" id="weeks-overview">
+                        <!-- Week cards will be dynamically generated -->
+                    </div>
+                </div>
+                <div>
+
+                </div>    
+                <!-- Current Week Highlight -->
+                <div class="current-week-highlight card">
+                    <h3>Current Week Focus</h3>
+                    <div id="current-week-info">
+                        <!-- Current week details -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly View Section -->
+        <section id="weekly" class="section">
+            <div class="container">
+                <div class="weekly-header">
+                    <button class="week-nav-btn" id="prev-week">
+                        <i class="fas fa-chevron-left"></i> Previous Week
+                    </button>
+                    <div class="week-title">
+                        <h2 id="week-title">Week 1: Fundamentals - Numbers &amp; Basic Verbal</h2>
+                        <p id="week-dates">22-28 Oct 2025</p>
+                    </div>
+                    <button class="week-nav-btn" id="next-week">
+                        Next Week <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Week Progress -->
+                <div class="week-progress card">
+                    <h3>Week Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="week-progress"></div>
+                        <span class="progress-text" id="week-progress-text">0%</span>
+                    </div>
+                </div>
+
+                <!-- Weekly Quote -->
+                <div class="weekly-quote card">
+                    <p id="weekly-quote">Discipline beats motivation — show up every day.</p>
+                </div>
+
+                <!-- Daily Tasks -->
+                <div class="daily-tasks">
+                    <h3>Daily Breakdown</h3>
+                    <div id="daily-tasks-container">
+                        <!-- Daily task cards will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formula Reference Section -->
+        <section id="formulas" class="section">
+            <div class="container">
+                <div class="formulas-header">
+                    <h2>Formula Reference</h2>
+                    <div class="search-box">
+                        <input type="text" id="formula-search" placeholder="Search formulas...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="formulas-grid">
+                    <div class="formula-category card">
+                        <h3>Numbers</h3>
+                        <div class="formula-list" data-category="numbers">
+                            <!-- Formulas will be populated here -->
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>LCM &amp; HCF</h3>
+                        <div class="formula-list" data-category="lcm_hcf">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Percentage</h3>
+                        <div class="formula-list" data-category="percentage">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Profit &amp; Loss</h3>
+                        <div class="formula-list" data-category="profit_loss">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Simple Interest</h3>
+                        <div class="formula-list" data-category="simple_interest">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Compound Interest</h3>
+                        <div class="formula-list" data-category="compound_interest">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Time &amp; Work</h3>
+                        <div class="formula-list" data-category="time_work">
+                        </div>
+                    </div>
+                    <div class="formula-category card">
+                        <h3>Time, Speed &amp; Distance</h3>
+                        <div class="formula-list" data-category="time_speed">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracker Section -->
+        <section id="progress" class="section">
+            <div class="container">
+                <!-- Overall Progress Section -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">📊 Overall Progress - 3 Month Journey</h2>
+                    <div class="progress-bar-modern">
+                        <div class="progress-fill-modern" id="enhanced-overall-progress-fill" style="width: 0%"></div>
+                        <span class="progress-text-modern" id="enhanced-overall-progress-text">0%</span>
+                    </div>
+                    <p style="text-align: center; color: var(--color-text-secondary); margin-top: 12px;">
+                        <span id="enhanced-completed-count">0</span> of <span id="enhanced-total-count">84</span> days completed
+                    </p>
+                </div>
+
+                <!-- Circular Progress - Subject Breakdown -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">🎯 Subject-wise Progress</h2>
+                    <div class="circular-progress-container">
+                        <div class="circular-progress">
+                            <svg width="140" height="140">
+                                <circle class="circular-progress-bg" cx="70" cy="70" r="60"></circle>
+                                <circle class="circular-progress-fill" id="enhanced-quant-circle" cx="70" cy="70" r="60" 
+                                        stroke-dasharray="377" stroke-dashoffset="377"></circle>
+                                <text class="circular-progress-text" x="70" y="75" text-anchor="middle" transform="rotate(90 70 70)">
+                                    <tspan id="enhanced-quant-percent">0%</tspan>
+                                </text>
+                            </svg>
+                            <div class="circular-progress-label">Quantitative Aptitude</div>
+                            <div class="circular-progress-sublabel" id="enhanced-quant-topics">0/36 topics</div>
+                        </div>
+
+                        <div class="circular-progress">
+                            <svg width="140" height="140">
+                                <circle class="circular-progress-bg" cx="70" cy="70" r="60"></circle>
+                                <circle class="circular-progress-fill" id="enhanced-verbal-circle" cx="70" cy="70" r="60" 
+                                        stroke-dasharray="377" stroke-dashoffset="377" style="stroke: #32B8C6;"></circle>
+                                <text class="circular-progress-text" x="70" y="75" text-anchor="middle" transform="rotate(90 70 70)">
+                                    <tspan id="enhanced-verbal-percent">0%</tspan>
+                                </text>
+                            </svg>
+                            <div class="circular-progress-label">Verbal Ability</div>
+                            <div class="circular-progress-sublabel" id="enhanced-verbal-topics">0/28 topics</div>
+                        </div>
+
+                        <div class="circular-progress">
+                            <svg width="140" height="140">
+                                <circle class="circular-progress-bg" cx="70" cy="70" r="60"></circle>
+                                <circle class="circular-progress-fill" id="enhanced-logical-circle" cx="70" cy="70" r="60" 
+                                        stroke-dasharray="377" stroke-dashoffset="377" style="stroke: #22C55E;"></circle>
+                                <text class="circular-progress-text" x="70" y="75" text-anchor="middle" transform="rotate(90 70 70)">
+                                    <tspan id="enhanced-logical-percent">0%</tspan>
+                                </text>
+                            </svg>
+                            <div class="circular-progress-label">Logical Reasoning</div>
+                            <div class="circular-progress-sublabel" id="enhanced-logical-topics">0/20 topics</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone Progress -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">🏁 Monthly Milestones</h2>
+                    <div class="milestone-progress">
+                        <div class="milestone-line">
+                            <div class="milestone-line-fill" id="enhanced-milestone-line-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="milestones">
+                            <div class="milestone" data-week="4">
+                                <div class="milestone-icon">M1</div>
+                                <div class="milestone-label">Month 1<br>Fundamentals</div>
+                            </div>
+                            <div class="milestone" data-week="8">
+                                <div class="milestone-icon">M2</div>
+                                <div class="milestone-label">Month 2<br>Intermediate</div>
+                            </div>
+                            <div class="milestone" data-week="12">
+                                <div class="milestone-icon">M3</div>
+                                <div class="milestone-label">Month 3<br>Mastery</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">📈 Performance Metrics</h2>
+                    <div class="stats-grid-enhanced">
+                        <div class="stat-card-enhanced">
+                            <div class="stat-header">
+                                <span class="stat-label">Study Hours</span>
+                            </div>
+                            <div class="stat-value" id="enhanced-study-hours">0</div>
+                            <span class="stat-change positive" id="enhanced-hours-change">+2 hrs today</span>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" id="enhanced-hours-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card-enhanced">
+                            <div class="stat-header">
+                                <span class="stat-label">Study Streak</span>
+                            </div>
+                            <div class="stat-value" id="enhanced-study-streak">0</div>
+                            <span class="stat-change positive" id="enhanced-streak-change">Keep it up! 🔥</span>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" id="enhanced-streak-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card-enhanced">
+                            <div class="stat-header">
+                                <span class="stat-label">Topics Mastered</span>
+                            </div>
+                            <div class="stat-value" id="enhanced-topics-mastered">0</div>
+                            <span class="stat-change positive" id="enhanced-topics-change">+5 this week</span>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" id="enhanced-topics-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card-enhanced">
+                            <div class="stat-header">
+                                <span class="stat-label">Days Remaining</span>
+                            </div>
+                            <div class="stat-value" id="enhanced-days-remaining">84</div>
+                            <span class="stat-change" style="background: rgba(99, 102, 241, 0.1); color: #6366F1;">Until exam day</span>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" id="enhanced-days-progress" style="width: 0%; background: #6366F1;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Heatmap -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">📅 12-Week Heatmap</h2>
+                    <div class="heatmap-container" id="enhanced-heatmap-container">
+                        <!-- Generated dynamically -->
+                    </div>
+                    <div class="heatmap-legend">
+                        <span>Less</span>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #e5e7eb;"></div>
+                            <span>0%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #bfdbfe;"></div>
+                            <span>25%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #60a5fa;"></div>
+                            <span>50%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #21808D;"></div>
+                            <span>75%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #22C55E;"></div>
+                            <span>100%</span>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+
+                <!-- Weekly Trend Chart -->
+                <div class="progress-section">
+                    <h2 class="section-title-enhanced">📊 Weekly Progress Trend</h2>
+                    <div class="chart-container-enhanced">
+                        <canvas id="enhanced-weekly-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weak Areas Section -->
+        <section id="weak-areas" class="section">
+            <div class="container">
+                <h2>Weak Areas Analyzer</h2>
+                
+                <div class="weak-areas-intro card">
+                    <p>Rate your confidence in each topic (1-5 scale). Topics rated below 3 will be flagged for extra practice.</p>
+                </div>
+
+                <div class="topics-rating">
+                    <h3>Rate Your Topics</h3>
+                    <div id="topics-rating-container">
+                        <!-- Topic rating cards will be generated here -->
+                    </div>
+                </div>
+
+                <div class="flagged-topics card">
+                    <h3>Topics Need Extra Attention</h3>
+                    <div id="flagged-topics-list">
+                        <p class="no-weak-areas">No weak areas identified yet. Rate your topics above to get personalized recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock Tests Section -->
+        <section id="mock-tests" class="section">
+            <div class="container">
+                <h2>🎯 Practice Tests & Mock Exams</h2>
+                
+                <div class="mock-tests-intro card">
+                    <p>Test your knowledge with topic-wise practice tests and full-length mock exams for final preparation (Weeks 11-12 focus).</p>
+                </div>
+
+                <!-- Enhanced Topic-wise Practice Tests -->
+                <div class="practice-tests-section">
+                    <h2>📝 Topic-wise Practice Tests</h2>
+                    <div class="test-grid" id="topic-tests-grid">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Full Mock Tests -->
+                <div class="full-mock-tests-section">
+                    <h2>🏆 Full Length Mock Tests (Weeks 11-12)</h2>
+                    <div class="test-grid" id="full-mock-tests-grid">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Test Interface (Hidden by default) -->
+                <div id="test-interface" style="display: none;">
+                    <div class="test-header-bar">
+                        <div class="test-header-info">
+                            <h2 id="test-title-header">Test Name</h2>
+                            <button onclick="exitTest()" class="btn-exit">✕ Exit Test</button>
+                        </div>
+                        <div class="test-meta-info">
+                            <span id="test-timer-display" class="timer-display">⏱️ Time: 30:00</span>
+                            <span id="test-progress-display" class="progress-display">Question 1/20</span>
+                        </div>
+                    </div>
+
+                    <div class="test-content-area">
+                        <div class="question-container" id="question-container">
+                            <!-- Question content -->
+                        </div>
+
+                        <div class="options-container" id="options-container">
+                            <!-- Options -->
+                        </div>
+
+                        <div class="test-navigation">
+                            <button onclick="previousQuestion()" class="btn-nav">← Previous</button>
+                            <button onclick="markForReview()" class="btn-mark">🔖 Mark for Review</button>
+                            <button onclick="nextQuestion()" class="btn-nav">Next →</button>
+                            <button onclick="submitTest()" class="btn-submit">📊 Submit Test</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Results (Hidden by default) -->
+                <div id="test-results-page" style="display: none;">
+                    <div class="results-wrapper">
+                        <h1>📊 Test Results</h1>
+                        <div class="score-summary">
+                            <div class="score-circle-large">
+                                <span id="final-score-percentage">0%</span>
+                            </div>
+                            <h2 id="performance-message">Great Job!</h2>
+                        </div>
+
+                        <div class="results-details">
+                            <div class="result-stat">
+                                <span class="result-label">✅ Correct</span>
+                                <span class="result-value" id="correct-answers-count">0</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-label">❌ Wrong</span>
+                                <span class="result-value" id="wrong-answers-count">0</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-label">⚪ Unanswered</span>
+                                <span class="result-value" id="unanswered-count">0</span>
+                            </div>
+                            <div class="result-stat">
+                                <span class="result-label">⏱️ Time Taken</span>
+                                <span class="result-value" id="time-taken">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="results-buttons">
+                            <button onclick="reviewAnswers()" class="btn btn--secondary">🔍 Review Answers</button>
+                            <button onclick="retakeTest()" class="btn btn--secondary">🔄 Retake Test</button>
+                            <button onclick="backToTests()" class="btn btn--primary">← Back to Tests</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Embedded JavaScript from app.js
+// Application Data
+const appData = {
+    study_plan: {
+        start_date: "2025-10-22",
+        total_weeks: 12,
+        subjects: ["Quantitative Aptitude", "Verbal Ability", "Logical Reasoning"]
+    },
+    weeks: {
+        week1: {
+            dates: "22-28 Oct 2025",
+            theme: "Fundamentals - Numbers & Basic Verbal",
+            quote: "Discipline beats motivation — show up every day.",
+            days: {
+                day1: { date: "22-Oct-2025", topics: "Numbers + Error Detection", hours: "2 hrs" },
+                day2: { date: "23-Oct-2025", topics: "LCM & HCF + Fill in the Blanks", hours: "2 hrs" },
+                day3: { date: "24-Oct-2025", topics: "Simplification + Sentence Rearrangement", hours: "2 hrs" },
+                day4: { date: "25-Oct-2025", topics: "Practice Mixed from Week", hours: "2 hrs" },
+                day5: { date: "26-Oct-2025", topics: "Revision of Week Topics", hours: "2 hrs" },
+                day6: { date: "27-Oct-2025", topics: "Quick Quiz + Formula Recap", hours: "2 hrs" },
+                day7: { date: "28-Oct-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week2: {
+            dates: "29 Oct - 4 Nov 2025",
+            theme: "Work, Time & Logical Patterns",
+            quote: "Progress, not perfection, is what leads to success.",
+            days: {
+                day1: { date: "29-Oct-2025", topics: "Work & Wages + Missing Numbers", hours: "2 hrs" },
+                day2: { date: "30-Oct-2025", topics: "Pipes & Cisterns + Data Sufficiency", hours: "2 hrs" },
+                day3: { date: "31-Oct-2025", topics: "Time Speed Distance + Alphanumeric Series", hours: "2 hrs" },
+                day4: { date: "01-Nov-2025", topics: "Mixed Practice from Week", hours: "2 hrs" },
+                day5: { date: "02-Nov-2025", topics: "Revision of Topics", hours: "2 hrs" },
+                day6: { date: "03-Nov-2025", topics: "Quick Quiz + Formula Recap", hours: "2 hrs" },
+                day7: { date: "04-Nov-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week3: {
+            dates: "5-11 Nov 2025",
+            theme: "Percentages & Comprehension",
+            quote: "Consistency turns average into excellence.",
+            days: {
+                day1: { date: "05-Nov-2025", topics: "Trains + Comprehension", hours: "2 hrs" },
+                day2: { date: "06-Nov-2025", topics: "Boats & Streams + Cloze Test", hours: "2 hrs" },
+                day3: { date: "07-Nov-2025", topics: "Percentages + Jumbled Paragraphs", hours: "2 hrs" },
+                day4: { date: "08-Nov-2025", topics: "Ratio-Proportion + Practice", hours: "2 hrs" },
+                day5: { date: "09-Nov-2025", topics: "Partnership + Revision", hours: "2 hrs" },
+                day6: { date: "10-Nov-2025", topics: "Quick Quiz + Formula Recap", hours: "2 hrs" },
+                day7: { date: "11-Nov-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week4: {
+            dates: "12-18 Nov 2025",
+            theme: "Mixtures & Logical Reasoning",
+            quote: "Believe you can, and you're halfway there.",
+            days: {
+                day1: { date: "12-Nov-2025", topics: "Mixtures + Assumptions", hours: "2 hrs" },
+                day2: { date: "13-Nov-2025", topics: "Algebra + Puzzles", hours: "2 hrs" },
+                day3: { date: "14-Nov-2025", topics: "Average + Conclusions", hours: "2 hrs" },
+                day4: { date: "15-Nov-2025", topics: "Alligation + Blood Relations", hours: "2 hrs" },
+                day5: { date: "16-Nov-2025", topics: "Practice Mixed Topics", hours: "2 hrs" },
+                day6: { date: "17-Nov-2025", topics: "Formula Recap + Revision", hours: "2 hrs" },
+                day7: { date: "18-Nov-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week5: {
+            dates: "19-25 Nov 2025",
+            theme: "Advanced Quantitative Skills",
+            quote: "Push harder than yesterday if you want a different tomorrow.",
+            days: {
+                day1: { date: "19-Nov-2025", topics: "Geometry + Analogies", hours: "2 hrs" },
+                day2: { date: "20-Nov-2025", topics: "Mensuration + Synonyms/Antonyms", hours: "2 hrs" },
+                day3: { date: "21-Nov-2025", topics: "Probability + Coding-Decoding", hours: "2 hrs" },
+                day4: { date: "22-Nov-2025", topics: "Permutation & Combination", hours: "2 hrs" },
+                day5: { date: "23-Nov-2025", topics: "Practice & Revision", hours: "2 hrs" },
+                day6: { date: "24-Nov-2025", topics: "Mixed Problem Solving", hours: "2 hrs" },
+                day7: { date: "25-Nov-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week6: {
+            dates: "26 Nov - 2 Dec 2025",
+            theme: "Data Interpretation & Advanced Verbal",
+            quote: "Great things never come from comfort zones.",
+            days: {
+                day1: { date: "26-Nov-2025", topics: "Data Interpretation Tables", hours: "2 hrs" },
+                day2: { date: "27-Nov-2025", topics: "Data Interpretation Graphs", hours: "2 hrs" },
+                day3: { date: "28-Nov-2025", topics: "Data Interpretation Charts", hours: "2 hrs" },
+                day4: { date: "29-Nov-2025", topics: "Advanced Reading Comprehension", hours: "2 hrs" },
+                day5: { date: "30-Nov-2025", topics: "Critical Reasoning", hours: "2 hrs" },
+                day6: { date: "01-Dec-2025", topics: "Mixed Practice", hours: "2 hrs" },
+                day7: { date: "02-Dec-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week7: {
+            dates: "3-9 Dec 2025",
+            theme: "Logical Reasoning Mastery",
+            quote: "Success is the sum of small efforts repeated daily.",
+            days: {
+                day1: { date: "03-Dec-2025", topics: "Seating Arrangements", hours: "2 hrs" },
+                day2: { date: "04-Dec-2025", topics: "Direction & Distance", hours: "2 hrs" },
+                day3: { date: "05-Dec-2025", topics: "Calendar & Clock Problems", hours: "2 hrs" },
+                day4: { date: "06-Dec-2025", topics: "Syllogisms", hours: "2 hrs" },
+                day5: { date: "07-Dec-2025", topics: "Statement & Reasoning", hours: "2 hrs" },
+                day6: { date: "08-Dec-2025", topics: "Mixed Logical Practice", hours: "2 hrs" },
+                day7: { date: "09-Dec-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week8: {
+            dates: "10-16 Dec 2025",
+            theme: "Integration & Speed Building",
+            quote: "Focus on progress, not speed.",
+            days: {
+                day1: { date: "10-Dec-2025", topics: "Speed Tests - Quantitative", hours: "2 hrs" },
+                day2: { date: "11-Dec-2025", topics: "Speed Tests - Verbal", hours: "2 hrs" },
+                day3: { date: "12-Dec-2025", topics: "Speed Tests - Logical", hours: "2 hrs" },
+                day4: { date: "13-Dec-2025", topics: "Mixed Section Tests", hours: "2 hrs" },
+                day5: { date: "14-Dec-2025", topics: "Time Management Practice", hours: "2 hrs" },
+                day6: { date: "15-Dec-2025", topics: "Error Analysis", hours: "2 hrs" },
+                day7: { date: "16-Dec-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week9: {
+            dates: "17-23 Dec 2025",
+            theme: "Advanced Practice & Weak Area Focus",
+            quote: "Your only limit is your mind.",
+            days: {
+                day1: { date: "17-Dec-2025", topics: "Weak Area Practice - Day 1", hours: "2 hrs" },
+                day2: { date: "18-Dec-2025", topics: "Weak Area Practice - Day 2", hours: "2 hrs" },
+                day3: { date: "19-Dec-2025", topics: "Advanced Problem Sets", hours: "2 hrs" },
+                day4: { date: "20-Dec-2025", topics: "Conceptual Clarity Sessions", hours: "2 hrs" },
+                day5: { date: "21-Dec-2025", topics: "Formula & Shortcut Revision", hours: "2 hrs" },
+                day6: { date: "22-Dec-2025", topics: "Mini Mock Test", hours: "2 hrs" },
+                day7: { date: "23-Dec-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week10: {
+            dates: "24-30 Dec 2025",
+            theme: "Pre-Mock Intensive Preparation",
+            quote: "Make each day your masterpiece.",
+            days: {
+                day1: { date: "24-Dec-2025", topics: "Sectional Mock - Quantitative", hours: "2 hrs" },
+                day2: { date: "25-Dec-2025", topics: "Sectional Mock - Verbal", hours: "2 hrs" },
+                day3: { date: "26-Dec-2025", topics: "Sectional Mock - Logical", hours: "2 hrs" },
+                day4: { date: "27-Dec-2025", topics: "Full Length Practice Test 1", hours: "3 hrs" },
+                day5: { date: "28-Dec-2025", topics: "Analysis & Improvement", hours: "2 hrs" },
+                day6: { date: "29-Dec-2025", topics: "Doubt Clearing Sessions", hours: "2 hrs" },
+                day7: { date: "30-Dec-2025", topics: "Weekly Review", hours: "-" }
+            }
+        },
+        week11: {
+            dates: "31 Dec 2025 - 6 Jan 2026",
+            theme: "Mock Test Phase - Part 1",
+            quote: "You are stronger than your excuses.",
+            days: {
+                day1: { date: "31-Dec-2025", topics: "Full Length Mock Test 1", hours: "3 hrs" },
+                day2: { date: "01-Jan-2026", topics: "Mock 1 Analysis & Review", hours: "2 hrs" },
+                day3: { date: "02-Jan-2026", topics: "Full Length Mock Test 2", hours: "3 hrs" },
+                day4: { date: "03-Jan-2026", topics: "Mock 2 Analysis & Review", hours: "2 hrs" },
+                day5: { date: "04-Jan-2026", topics: "Targeted Practice", hours: "2 hrs" },
+                day6: { date: "05-Jan-2026", topics: "Strategy Refinement", hours: "2 hrs" },
+                day7: { date: "06-Jan-2026", topics: "Rest & Light Review", hours: "1 hr" }
+            }
+        },
+        week12: {
+            dates: "7-13 Jan 2026",
+            theme: "Final Mock Tests & Exam Ready",
+            quote: "The harder you work, the luckier you get.",
+            days: {
+                day1: { date: "07-Jan-2026", topics: "Full Length Mock Test 3", hours: "3 hrs" },
+                day2: { date: "08-Jan-2026", topics: "Mock 3 Analysis & Final Weak Areas", hours: "2 hrs" },
+                day3: { date: "09-Jan-2026", topics: "Full Length Mock Test 4", hours: "3 hrs" },
+                day4: { date: "10-Jan-2026", topics: "Final Analysis & Strategy", hours: "2 hrs" },
+                day5: { date: "11-Jan-2026", topics: "Light Revision & Formula Recap", hours: "1 hr" },
+                day6: { date: "12-Jan-2026", topics: "Final Preparation Day", hours: "1 hr" },
+                day7: { date: "13-Jan-2026", topics: "Rest Day - Exam Tomorrow!", hours: "-" }
+            }
+        }
+    },
+    formulas: {
+        numbers: [
+            "➤ Divisibility by 2: Last digit is even (0, 2, 4, 6, 8)",
+            "➤ Divisibility by 3: Sum of digits divisible by 3",
+            "➤ Divisibility by 4: Last two digits divisible by 4",
+            "➤ Divisibility by 5: Last digit is 0 or 5",
+            "➤ Divisibility by 6: Divisible by both 2 and 3",
+            "➤ Divisibility by 8: Last three digits divisible by 8",
+            "➤ Divisibility by 9: Sum of digits divisible by 9",
+            "➤ Divisibility by 11: (Sum of odd position digits) - (Sum of even position digits) = 0 or multiple of 11",
+            "➤ Sum of first n natural numbers = n(n+1)/2",
+            "➤ Sum of first n odd numbers = n²",
+            "➤ Sum of first n even numbers = n(n+1)",
+            "➤ Sum of squares of first n natural numbers = n(n+1)(2n+1)/6",
+            "➤ Sum of cubes of first n natural numbers = [n(n+1)/2]²"
+        ],
+        lcm_hcf: [
+            "➤ LCM × HCF = Product of two numbers",
+            "➤ LCM of fractions = LCM(numerators) / HCF(denominators)",
+            "➤ HCF of fractions = HCF(numerators) / LCM(denominators)",
+            "➤ For co-prime numbers: LCM = Product of numbers, HCF = 1"
+        ],
+        percentage: [
+            "➤ Percentage = (Value/Total) × 100",
+            "➤ % Increase = [(New - Old)/Old] × 100",
+            "➤ % Decrease = [(Old - New)/Old] × 100",
+            "➤ Successive changes: x% then y% = x + y + (xy/100)%",
+            "➤ If A is x% more than B, then B is [x/(100+x)] × 100% less than A",
+            "➤ If price increases by x%, consumption should decrease by [x/(100+x)] × 100% to keep expenditure same"
+        ],
+        profit_loss: [
+            "➤ Profit% = (Profit/CP) × 100",
+            "➤ Loss% = (Loss/CP) × 100",
+            "➤ SP = CP × (100 + Profit%)/100",
+            "➤ CP = [SP × 100]/(100 + Profit%)",
+            "➤ Discount% = (Discount/MP) × 100",
+            "➤ SP = MP × (100 - Discount%)/100",
+            "➤ If CP of x articles = SP of y articles, then Profit% = [(x-y)/y] × 100"
+        ],
+        simple_interest: [
+            "➤ SI = (P × R × T)/100",
+            "➤ Amount = P + SI = P(1 + RT/100)",
+            "➤ P = Principal, R = Rate% per annum, T = Time in years"
+        ],
+        compound_interest: [
+            "➤ Amount = P(1 + R/100)^T",
+            "➤ CI = P[(1 + R/100)^T - 1]",
+            "➤ Half-yearly: A = P(1 + R/200)^(2T)",
+            "➤ Quarterly: A = P(1 + R/400)^(4T)",
+            "➤ Monthly: A = P(1 + R/1200)^(12T)",
+            "➤ Difference between CI and SI for 2 years = P(R/100)²"
+        ],
+        time_speed: [
+            "➤ Speed = Distance/Time",
+            "➤ Average Speed (equal distances) = 2S₁S₂/(S₁+S₂)",
+            "➤ Average Speed (equal times) = (S₁+S₂)/2",
+            "➤ Relative Speed (opposite direction) = S₁ + S₂",
+            "➤ Relative Speed (same direction) = |S₁ - S₂|",
+            "➤ 1 km/hr = 5/18 m/s",
+            "➤ 1 m/s = 18/5 km/hr",
+            "➤ Time taken to cross a pole/person = Length of train / Speed",
+            "➤ Time to cross a platform = (Length of train + Length of platform) / Speed"
+        ],
+        time_work: [
+            "➤ Work done in 1 day = 1/Total days required",
+            "➤ If A can do work in 'a' days and B in 'b' days, together = ab/(a+b) days",
+            "➤ M₁H₁D₁/W₁ = M₂H₂D₂/W₂ (M=Men, H=Hours/day, D=Days, W=Work)",
+            "➤ M₁D₁/W₁ = M₂D₂/W₂ (when hours per day are same)",
+            "➤ Efficiency × Time = Total Work"
+        ],
+        ratio: [
+            "➤ If a:b = c:d, then ad = bc (Cross multiplication)",
+            "➤ Componendo: (a+b)/b = (c+d)/d",
+            "➤ Dividendo: (a-b)/b = (c-d)/d",
+            "➤ Componendo-Dividendo: (a+b)/(a-b) = (c+d)/(c-d)",
+            "➤ If a/b = c/d = e/f, then each ratio = (a+c+e)/(b+d+f)"
+        ],
+        permutation: [
+            "➤ ⁿPᵣ = n!/(n-r)! (Permutation)",
+            "➤ ⁿCᵣ = n!/[r!(n-r)!] (Combination)",
+            "➤ ⁿCᵣ = ⁿCₙ₋ᵣ",
+            "➤ ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ",
+            "➤ Circular arrangement = (n-1)!",
+            "➤ Circular arrangement (when clockwise = anticlockwise) = (n-1)!/2"
+        ],
+        area: [
+            "➤ Rectangle: Area = l × b, Perimeter = 2(l+b)",
+            "➤ Square: Area = a², Perimeter = 4a, Diagonal = a√2",
+            "➤ Triangle: Area = ½ × base × height",
+            "➤ Heron's Formula: Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2",
+            "➤ Equilateral Triangle: Area = (√3/4)a²",
+            "➤ Circle: Area = πr², Circumference = 2πr",
+            "➤ Trapezium: Area = ½(a+b)h",
+            "➤ Parallelogram: Area = base × height",
+            "➤ Rhombus: Area = ½ × d₁ × d₂"
+        ]
+    },
+    motivational_quotes: [
+        "Discipline beats motivation — show up every day.",
+        "Progress, not perfection, is what leads to success.",
+        "Consistency turns average into excellence.",
+        "Believe you can, and you're halfway there.",
+        "Push harder than yesterday if you want a different tomorrow.",
+        "Great things never come from comfort zones.",
+        "Success is the sum of small efforts repeated daily.",
+        "Focus on progress, not speed.",
+        "Your only limit is your mind.",
+        "Make each day your masterpiece.",
+        "You are stronger than your excuses.",
+        "The harder you work, the luckier you get."
+    ]
+};
+
+// Application State - Using localStorage for persistence
+let appState = {
+    currentWeek: 1,
+    currentSection: 'dashboard',
+    completedTasks: {},
+    taskNotes: {},
+    topicRatings: {},
+    mockTests: [],
+    studyHours: 0,
+    studyStreak: 0,
+    lastStudyDate: null,
+    startDate: new Date().toISOString().split('T')[0] // YYYY-MM-DD format
+};
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
+});
+
+function initializeApp() {
+    // Load state FIRST before setting up UI
+    loadAppState();
+    
+    setupNavigation();
+    setupCurrentDate();
+    setupDashboard();
+    setupWeeklyView();
+    setupFormulas();
+    setupProgressTracker();
+    setupWeakAreas();
+    setupMockTests();
+    
+    // Show dashboard by default
+    showSection('dashboard');
+    
+    console.log('App initialized with state:', appState);
+}
+
+function setupNavigation() {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const section = this.dataset.section;
+            showSection(section);
+            
+            // Update active navigation
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+}
+
+function showSection(sectionName) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    const targetSection = document.getElementById(sectionName);
+    if (targetSection) {
+        targetSection.classList.add('active');
+        appState.currentSection = sectionName;
+        
+        // Refresh section content when shown
+        if (sectionName === 'dashboard') {
+            refreshDashboard();
+        } else if (sectionName === 'weekly') {
+            refreshWeeklyView();
+        } else if (sectionName === 'progress') {
+            refreshProgressTracker();
+        } else if (sectionName === 'weak-areas') {
+            refreshWeakAreas();
+        } else if (sectionName === 'mock-tests') {
+            refreshMockTests();
+        }
+    }
+}
+
+function setupCurrentDate() {
+    const currentDateElement = document.getElementById('current-date');
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    currentDateElement.textContent = formattedDate;
+}
+
+function setupDashboard() {
+    // Initialize date picker with current start date
+    const datePicker = document.getElementById('start-date-picker');
+    if (datePicker) {
+        datePicker.value = appState.startDate;
+    }
+    updateCurrentStartDateDisplay();
+    generateWeeksOverview();
+    updateStats();
+    setDailyQuote();
+    updateCurrentWeekHighlight();
+}
+
+window.updateStartDate = function() {
+    const datePicker = document.getElementById('start-date-picker');
+    const newDate = datePicker.value;
+    
+    if (!newDate) {
+        alert('Please select a valid date');
+        return;
+    }
+    
+    appState.startDate = newDate;
+    saveAppState();
+    updateCurrentStartDateDisplay();
+    
+    // Recalculate current week based on new start date
+    const today = new Date();
+    const start = new Date(appState.startDate);
+    const daysDiff = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+    const newWeek = Math.max(1, Math.min(12, Math.floor(daysDiff / 7) + 1));
+    appState.currentWeek = newWeek;
+    
+    saveAppState();
+    refreshDashboard();
+    
+    alert(`Start date updated to ${new Date(newDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}. Current week is now Week ${newWeek}.`);
+}
+
+function updateCurrentStartDateDisplay() {
+    const display = document.getElementById('current-start-date');
+    if (display && appState.startDate) {
+        const date = new Date(appState.startDate);
+        display.textContent = date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+    }
+}
+
+function generateWeeksOverview() {
+    const weeksContainer = document.getElementById('weeks-overview');
+    weeksContainer.innerHTML = '';
+    
+    for (let i = 1; i <= 12; i++) {
+        const weekKey = `week${i}`;
+        const weekData = appData.weeks[weekKey];
+        
+        if (weekData) {
+            const weekCard = createWeekCard(i, weekData);
+            weeksContainer.appendChild(weekCard);
+        }
+    }
+}
+
+function createWeekCard(weekNumber, weekData) {
+    const weekCard = document.createElement('div');
+    weekCard.className = 'week-card';
+    
+    const progress = Math.min(100, Math.max(0, calculateWeekProgress(weekNumber)));
+    let statusClass = 'upcoming';
+    let statusText = 'Upcoming';
+    
+    if (weekNumber === appState.currentWeek) {
+        statusClass = 'current';
+        statusText = 'Current';
+        weekCard.classList.add('current');
+    } else if (progress === 100) {
+        statusClass = 'completed';
+        statusText = 'Completed';
+        weekCard.classList.add('completed');
+    } else if (progress > 0) {
+        statusClass = 'in-progress';
+        statusText = 'In Progress';
+        weekCard.classList.add('in-progress');
+    }
+    
+    weekCard.innerHTML = `
+        <div class="week-header">
+            <span class="week-number">Week ${weekNumber}</span>
+            <span class="week-status ${statusClass}">${statusText}</span>
+        </div>
+        <div class="week-theme">${weekData.theme}</div>
+        <div class="week-dates">${weekData.dates}</div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: ${progress}%"></div>
+            <span class="progress-text">${progress}%</span>
+        </div>
+    `;
+    
+    weekCard.addEventListener('click', function() {
+        appState.currentWeek = weekNumber;
+        showSection('weekly');
+        document.querySelector('[data-section="weekly"]').classList.add('active');
+        document.querySelector('[data-section="dashboard"]').classList.remove('active');
+    });
+    
+    return weekCard;
+}
+
+function calculateWeekProgress(weekNumber) {
+    const weekKey = `week${weekNumber}`;
+    const weekData = appData.weeks[weekKey];
+    
+    if (!weekData) return 0;
+    
+    const totalDays = Object.keys(weekData.days).length;
+    let completedDays = 0;
+    
+    for (const dayKey in weekData.days) {
+        const taskId = `${weekKey}-${dayKey}`;
+        if (appState.completedTasks[taskId]) {
+            completedDays++;
+        }
+    }
+    
+    return Math.round((completedDays / totalDays) * 100);
+}
+
+function updateStats() {
+    // Calculate total completed topics
+    const completedTopics = Object.keys(appState.completedTasks).length;
+    document.getElementById('completed-topics').textContent = completedTopics;
+    
+    // Calculate total study hours
+    document.getElementById('total-hours').textContent = appState.studyHours;
+    
+    // Calculate days remaining using user's custom start date
+    const startDate = new Date(appState.startDate);
+    const endDate = new Date(startDate);
+    endDate.setDate(endDate.getDate() + (12 * 7)); // 12 weeks = 84 days
+    const today = new Date();
+    const daysRemaining = Math.max(0, Math.ceil((endDate - today) / (1000 * 60 * 60 * 24)));
+    document.getElementById('days-remaining').textContent = daysRemaining;
+    
+    // Update study streak
+    document.getElementById('study-streak').textContent = appState.studyStreak;
+    
+    // Update overall progress
+    const totalTasks = Object.keys(appData.weeks).reduce((total, weekKey) => {
+        return total + Object.keys(appData.weeks[weekKey].days).length;
+    }, 0);
+    
+    const overallProgress = Math.min(100, Math.max(0, Math.round((completedTopics / totalTasks) * 100)));
+    const overallProgressFill = document.getElementById('overall-progress');
+    const overallProgressText = document.getElementById('overall-progress-text');
+    
+    if (overallProgressFill && overallProgressText) {
+        overallProgressFill.style.width = `${overallProgress}%`;
+        overallProgressText.textContent = `${overallProgress}%`;
+    }
+}
+
+function setDailyQuote() {
+    const today = new Date();
+    const quoteIndex = today.getDate() % appData.motivational_quotes.length;
+    const quote = appData.motivational_quotes[quoteIndex];
+    document.getElementById('daily-quote').textContent = quote;
+}
+
+function updateCurrentWeekHighlight() {
+    const currentWeekInfo = document.getElementById('current-week-info');
+    const weekKey = `week${appState.currentWeek}`;
+    const weekData = appData.weeks[weekKey];
+    
+    if (weekData) {
+        const weekProgress = Math.min(100, Math.max(0, calculateWeekProgress(appState.currentWeek)));
+        currentWeekInfo.innerHTML = `
+            <h4>Week ${appState.currentWeek}: ${weekData.theme}</h4>
+            <p><strong>Dates:</strong> ${weekData.dates}</p>
+            <p><strong>Focus:</strong> ${weekData.theme}</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: ${weekProgress}%"></div>
+                <span class="progress-text">${weekProgress}%</span>
+            </div>
+        `;
+    }
+}
+
+function setupWeeklyView() {
+    // Setup navigation buttons
+    document.getElementById('prev-week').addEventListener('click', function() {
+        if (appState.currentWeek > 1) {
+            appState.currentWeek--;
+            refreshWeeklyView();
+        }
+    });
+    
+    document.getElementById('next-week').addEventListener('click', function() {
+        if (appState.currentWeek < 12) {
+            appState.currentWeek++;
+            refreshWeeklyView();
+        }
+    });
+}
+
+function refreshWeeklyView() {
+    const weekKey = `week${appState.currentWeek}`;
+    const weekData = appData.weeks[weekKey];
+    
+    if (!weekData) return;
+    
+    // Update header
+    document.getElementById('week-title').innerHTML = `Week ${appState.currentWeek}: ${weekData.theme}`;
+    document.getElementById('week-dates').textContent = weekData.dates;
+    
+    // Update quote
+    document.getElementById('weekly-quote').textContent = weekData.quote;
+    
+    // Update week progress
+    const progress = Math.min(100, Math.max(0, calculateWeekProgress(appState.currentWeek)));
+    const weekProgressFill = document.getElementById('week-progress');
+    const weekProgressText = document.getElementById('week-progress-text');
+    
+    if (weekProgressFill && weekProgressText) {
+        weekProgressFill.style.width = `${progress}%`;
+        weekProgressText.textContent = `${progress}%`;
+    }
+    
+    // Generate daily tasks
+    generateDailyTasks(weekKey, weekData);
+    
+    // Update navigation buttons
+    document.getElementById('prev-week').disabled = appState.currentWeek === 1;
+    document.getElementById('next-week').disabled = appState.currentWeek === 12;
+}
+
+function generateDailyTasks(weekKey, weekData) {
+    const dailyTasksContainer = document.getElementById('daily-tasks-container');
+    dailyTasksContainer.innerHTML = '';
+    
+    Object.entries(weekData.days).forEach(([dayKey, dayData]) => {
+        const taskCard = createDailyTaskCard(weekKey, dayKey, dayData);
+        dailyTasksContainer.appendChild(taskCard);
+    });
+}
+
+function createDailyTaskCard(weekKey, dayKey, dayData) {
+    const taskId = `${weekKey}-${dayKey}`;
+    const isCompleted = appState.completedTasks[taskId] || false;
+    const notes = appState.taskNotes[taskId] || '';
+    
+    const taskCard = document.createElement('div');
+    taskCard.className = `daily-task ${isCompleted ? 'completed' : ''}`;
+    
+    const dayNumber = dayKey.replace('day', '');
+    
+    taskCard.innerHTML = `
+        <div class="task-header">
+            <div class="task-date">
+                <span class="day-number">Day ${dayNumber}</span>
+                <span class="date-text">${dayData.date}</span>
+            </div>
+            <div class="task-hours">${dayData.hours}</div>
+        </div>
+        <div class="task-content">
+            <div class="task-topics">${dayData.topics}</div>
+        </div>
+        <div class="task-actions">
+            <input type="checkbox" class="task-checkbox" ${isCompleted ? 'checked' : ''} 
+                   onchange="toggleTaskCompletion('${taskId}', this.checked)">
+            <input type="text" class="task-notes" placeholder="Add notes..." 
+                   value="${notes}" onchange="updateTaskNotes('${taskId}', this.value)">
+        </div>
+    `;
+    
+    return taskCard;
+}
+
+window.toggleTaskCompletion = function(taskId, isCompleted) {
+    appState.completedTasks[taskId] = isCompleted;
+    
+    if (isCompleted) {
+        // Add 2 hours to study time (or 1 for review days)
+        const hours = taskId.includes('day7') ? 0 : 2;
+        appState.studyHours += hours;
+        
+        // Update streak
+        updateStudyStreak();
+    } else {
+        // Subtract hours if unchecked
+        const hours = taskId.includes('day7') ? 0 : 2;
+        appState.studyHours = Math.max(0, appState.studyHours - hours);
+    }
+    
+    // Refresh displays
+    refreshWeeklyView();
+    if (appState.currentSection === 'dashboard') {
+        refreshDashboard();
+    }
+    
+    saveAppState();
+}
+
+window.updateTaskNotes = function(taskId, notes) {
+    appState.taskNotes[taskId] = notes;
+    saveAppState();
+}
+
+function updateStudyStreak() {
+    const today = new Date();
+    const lastStudy = appState.lastStudyDate ? new Date(appState.lastStudyDate) : null;
+    
+    if (!lastStudy) {
+        appState.studyStreak = 1;
+    } else {
+        const daysDiff = Math.floor((today - lastStudy) / (1000 * 60 * 60 * 24));
+        if (daysDiff === 1) {
+            appState.studyStreak++;
+        } else if (daysDiff > 1) {
+            appState.studyStreak = 1;
+        }
+    }
+    
+    appState.lastStudyDate = today.toISOString().split('T')[0];
+}
+
+function setupFormulas() {
+    populateFormulas();
+    setupFormulaSearch();
+}
+
+function populateFormulas() {
+    Object.entries(appData.formulas).forEach(([category, formulas]) => {
+        const container = document.querySelector(`[data-category="${category}"]`);
+        if (container) {
+            container.innerHTML = formulas.map(formula => 
+                `<div class="formula-item">${formula}</div>`
+            ).join('');
+        }
+    });
+}
+
+function setupFormulaSearch() {
+    const searchInput = document.getElementById('formula-search');
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const formulaItems = document.querySelectorAll('.formula-item');
+        
+        formulaItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+                item.classList.remove('hidden');
+                item.parentElement.parentElement.style.display = 'block';
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+        
+        // Hide categories with no visible formulas
+        document.querySelectorAll('.formula-category').forEach(category => {
+            const visibleFormulas = category.querySelectorAll('.formula-item:not(.hidden)');
+            category.style.display = visibleFormulas.length > 0 ? 'block' : 'none';
+        });
+    });
+}
+
+function setupProgressTracker() {
+    // Progress tracker will be refreshed when the section is shown
+}
+
+function refreshProgressTracker() {
+    // Only use enhanced progress visualizations
+    initializeEnhancedProgress();
+}
+
+// Enhanced Progress Visualization Functions
+function initializeEnhancedProgress() {
+    updateEnhancedOverallProgress();
+    updateEnhancedSubjectProgress();
+    updateEnhancedMilestones();
+    updateEnhancedStats();
+    generateEnhancedHeatmap();
+    initializeEnhancedWeeklyChart();
+}
+
+function updateEnhancedOverallProgress() {
+    const totalTasks = Object.keys(appData.weeks).reduce((total, weekKey) => {
+        return total + Object.keys(appData.weeks[weekKey].days).length;
+    }, 0);
+    
+    const completedTasks = Object.keys(appState.completedTasks).length;
+    const overallProgress = Math.min(100, Math.max(0, Math.round((completedTasks / totalTasks) * 100)));
+    
+    const fillEl = document.getElementById('enhanced-overall-progress-fill');
+    const textEl = document.getElementById('enhanced-overall-progress-text');
+    const completedEl = document.getElementById('enhanced-completed-count');
+    const totalEl = document.getElementById('enhanced-total-count');
+    
+    if (fillEl && textEl && completedEl && totalEl) {
+        setTimeout(() => {
+            fillEl.style.width = overallProgress + '%';
+            textEl.textContent = overallProgress + '%';
+            completedEl.textContent = completedTasks;
+            totalEl.textContent = totalTasks;
+        }, 100);
+    }
+}
+
+function updateEnhancedSubjectProgress() {
+    // Calculate subject-wise progress
+    const subjects = {
+        'quant': { completed: 0, total: 0 },
+        'verbal': { completed: 0, total: 0 },
+        'logical': { completed: 0, total: 0 }
+    };
+    
+    Object.keys(appData.weeks).forEach(weekKey => {
+        Object.keys(appData.weeks[weekKey].days).forEach(dayKey => {
+            const taskId = `${weekKey}-${dayKey}`;
+            const dayData = appData.weeks[weekKey].days[dayKey];
+            const topics = dayData.topics.toLowerCase();
+            
+            // Categorize by subject
+            if (topics.includes('number') || topics.includes('lcm') || topics.includes('percentage') ||
+                topics.includes('profit') || topics.includes('time') || topics.includes('work') ||
+                topics.includes('ratio') || topics.includes('mixture') || topics.includes('algebra') ||
+                topics.includes('average') || topics.includes('geometry') || topics.includes('probability')) {
+                subjects.quant.total++;
+                if (appState.completedTasks[taskId]) subjects.quant.completed++;
+            }
+            
+            if (topics.includes('error') || topics.includes('fill') || topics.includes('sentence') ||
+                topics.includes('comprehension') || topics.includes('cloze') || topics.includes('jumbled') ||
+                topics.includes('synonyms') || topics.includes('verbal') || topics.includes('reading')) {
+                subjects.verbal.total++;
+                if (appState.completedTasks[taskId]) subjects.verbal.completed++;
+            }
+            
+            if (topics.includes('missing') || topics.includes('data sufficiency') || topics.includes('series') ||
+                topics.includes('coding') || topics.includes('assumptions') || topics.includes('puzzles') ||
+                topics.includes('conclusions') || topics.includes('blood') || topics.includes('analogies') ||
+                topics.includes('logical') || topics.includes('reasoning') || topics.includes('seating') ||
+                topics.includes('direction') || topics.includes('calendar') || topics.includes('syllogism')) {
+                subjects.logical.total++;
+                if (appState.completedTasks[taskId]) subjects.logical.completed++;
+            }
+        });
+    });
+    
+    updateEnhancedCircularProgress('quant', subjects.quant);
+    updateEnhancedCircularProgress('verbal', subjects.verbal);
+    updateEnhancedCircularProgress('logical', subjects.logical);
+}
+
+function updateEnhancedCircularProgress(subject, data) {
+    const circle = document.getElementById(`enhanced-${subject}-circle`);
+    const percentText = document.getElementById(`enhanced-${subject}-percent`);
+    const topicsText = document.getElementById(`enhanced-${subject}-topics`);
+    
+    if (!circle || !percentText || !topicsText) return;
+    
+    const progress = data.total > 0 ? Math.round((data.completed / data.total) * 100) : 0;
+    const circumference = 2 * Math.PI * 60;
+    const offset = circumference - (progress / 100) * circumference;
+    
+    setTimeout(() => {
+        circle.style.strokeDashoffset = offset;
+        percentText.textContent = progress + '%';
+        topicsText.textContent = `${data.completed}/${data.total} topics`;
+    }, 300);
+}
+
+function updateEnhancedMilestones() {
+    const currentWeek = appState.currentWeek;
+    const milestones = document.querySelectorAll('.milestone');
+    
+    milestones.forEach((milestone, index) => {
+        const weekThreshold = parseInt(milestone.dataset.week);
+        milestone.classList.remove('completed', 'current');
+        
+        if (currentWeek > weekThreshold) {
+            milestone.classList.add('completed');
+        } else if (currentWeek === weekThreshold || (index === 0 && currentWeek <= 4)) {
+            milestone.classList.add('current');
+        }
+    });
+
+    const progress = Math.min(100, (currentWeek / 12) * 100);
+    const lineEl = document.getElementById('enhanced-milestone-line-fill');
+    if (lineEl) {
+        setTimeout(() => {
+            lineEl.style.width = progress + '%';
+        }, 500);
+    }
+}
+
+function updateEnhancedStats() {
+    // Study hours
+    const hoursEl = document.getElementById('enhanced-study-hours');
+    const hoursProgressEl = document.getElementById('enhanced-hours-progress');
+    if (hoursEl && hoursProgressEl) {
+        hoursEl.textContent = appState.studyHours;
+        const maxHours = 168; // Max hours per week
+        hoursProgressEl.style.width = Math.min(100, (appState.studyHours / maxHours * 100)) + '%';
+    }
+
+    // Study streak
+    const streakEl = document.getElementById('enhanced-study-streak');
+    const streakProgressEl = document.getElementById('enhanced-streak-progress');
+    if (streakEl && streakProgressEl) {
+        streakEl.textContent = appState.studyStreak + ' days';
+        const maxStreak = 30;
+        streakProgressEl.style.width = Math.min(100, (appState.studyStreak / maxStreak * 100)) + '%';
+    }
+
+    // Topics mastered
+    const topicsMasteredEl = document.getElementById('enhanced-topics-mastered');
+    const topicsProgressEl = document.getElementById('enhanced-topics-progress');
+    const totalTopics = Object.keys(appData.weeks).reduce((total, weekKey) => {
+        return total + Object.keys(appData.weeks[weekKey].days).length;
+    }, 0);
+    const completedTopics = Object.keys(appState.completedTasks).length;
+    
+    if (topicsMasteredEl && topicsProgressEl) {
+        topicsMasteredEl.textContent = completedTopics;
+        topicsProgressEl.style.width = Math.min(100, (completedTopics / totalTopics * 100)) + '%';
+    }
+
+    // Days remaining
+    const daysRemainingEl = document.getElementById('enhanced-days-remaining');
+    const daysProgressEl = document.getElementById('enhanced-days-progress');
+    const startDate = new Date(appData.study_plan.start_date);
+    const endDate = new Date(startDate);
+    endDate.setDate(endDate.getDate() + (12 * 7));
+    const today = new Date();
+    const daysElapsed = Math.max(0, Math.ceil((today - startDate) / (1000 * 60 * 60 * 24)));
+    const daysRemaining = Math.max(0, Math.ceil((endDate - today) / (1000 * 60 * 60 * 24)));
+    
+    if (daysRemainingEl && daysProgressEl) {
+        daysRemainingEl.textContent = daysRemaining;
+        const totalDays = 84;
+        daysProgressEl.style.width = Math.min(100, (daysElapsed / totalDays * 100)) + '%';
+    }
+}
+
+function generateEnhancedHeatmap() {
+    const container = document.getElementById('enhanced-heatmap-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+
+    for (let week = 1; week <= 12; week++) {
+        const progress = calculateWeekProgress(week);
+        let level = 0;
+        if (progress > 0) level = 1;
+        if (progress >= 25) level = 1;
+        if (progress >= 50) level = 2;
+        if (progress >= 75) level = 3;
+        if (progress === 100) level = 4;
+
+        const cell = document.createElement('div');
+        cell.className = `heatmap-cell level-${level}`;
+        cell.textContent = `W${week}`;
+        cell.title = `Week ${week}: ${progress}% complete`;
+        
+        cell.addEventListener('click', () => {
+            appState.currentWeek = week;
+            showSection('weekly');
+        });
+        
+        container.appendChild(cell);
+    }
+}
+
+function initializeEnhancedWeeklyChart() {
+    const canvas = document.getElementById('enhanced-weekly-chart');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Calculate weekly progress
+    const weeklyProgress = [];
+    for (let i = 1; i <= 12; i++) {
+        weeklyProgress.push(calculateWeekProgress(i));
+    }
+    
+    // Destroy existing chart if it exists
+    if (window.enhancedWeeklyChart) {
+        window.enhancedWeeklyChart.destroy();
+    }
+    
+    window.enhancedWeeklyChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: Array.from({length: 12}, (_, i) => `Week ${i + 1}`),
+            datasets: [{
+                label: 'Weekly Progress',
+                data: weeklyProgress,
+                borderColor: '#21808D',
+                backgroundColor: 'rgba(33, 128, 141, 0.1)',
+                tension: 0.4,
+                fill: true,
+                pointRadius: 6,
+                pointBackgroundColor: '#21808D',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointHoverRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return 'Progress: ' + context.parsed.y + '%';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%';
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.05)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+}
+
+function setupWeakAreas() {
+    generateTopicsRating();
+}
+
+function generateTopicsRating() {
+    const topicsContainer = document.getElementById('topics-rating-container');
+    const topics = [
+        'Numbers', 'LCM & HCF', 'Simplification', 'Work & Wages', 'Pipes & Cisterns',
+        'Time Speed Distance', 'Percentages', 'Ratio & Proportion', 'Partnership',
+        'Mixtures', 'Algebra', 'Average', 'Geometry', 'Mensuration', 'Probability',
+        'Permutation & Combination', 'Data Interpretation', 'Error Detection',
+        'Fill in the Blanks', 'Sentence Rearrangement', 'Reading Comprehension',
+        'Cloze Test', 'Jumbled Paragraphs', 'Synonyms & Antonyms', 'Missing Numbers',
+        'Data Sufficiency', 'Alphanumeric Series', 'Coding-Decoding', 'Assumptions',
+        'Puzzles', 'Conclusions', 'Blood Relations', 'Analogies', 'Seating Arrangements',
+        'Direction & Distance', 'Calendar & Clock', 'Syllogisms', 'Statement & Reasoning'
+    ];
+    
+    topicsContainer.innerHTML = topics.map(topic => {
+        const rating = appState.topicRatings[topic] || 0;
+        return createTopicRatingCard(topic, rating);
+    }).join('');
+}
+
+function createTopicRatingCard(topic, currentRating) {
+    return `
+        <div class="topic-rating-card">
+            <span class="topic-name">${topic}</span>
+            <div class="rating-stars">
+                ${Array.from({length: 5}, (_, i) => {
+                    const starNumber = i + 1;
+                    const isActive = starNumber <= currentRating;
+                    return `<span class="star ${isActive ? 'active' : ''}" 
+                                  onclick="rateTopic('${topic}', ${starNumber})">
+                                ★
+                            </span>`;
+                }).join('')}
+            </div>
+        </div>
+    `;
+}
+
+window.rateTopic = function(topic, rating) {
+    appState.topicRatings[topic] = rating;
+    generateTopicsRating(); // Refresh the display
+    updateFlaggedTopics();
+    saveAppState();
+}
+
+function refreshWeakAreas() {
+    generateTopicsRating();
+    updateFlaggedTopics();
+}
+
+function updateFlaggedTopics() {
+    const flaggedContainer = document.getElementById('flagged-topics-list');
+    const weakTopics = Object.entries(appState.topicRatings)
+        .filter(([topic, rating]) => rating < 3 && rating > 0)
+        .map(([topic]) => topic);
+    
+    if (weakTopics.length === 0) {
+        flaggedContainer.innerHTML = '<p class="no-weak-areas">Great! No weak areas identified. Keep up the excellent work!</p>';
+        return;
+    }
+    
+    const suggestions = {
+        'Numbers': 'Practice more number properties and divisibility rules',
+        'LCM & HCF': 'Focus on prime factorization method',
+        'Percentages': 'Learn percentage shortcuts and tricks',
+        'Time Speed Distance': 'Practice relative speed problems',
+        'Work & Wages': 'Understand work rate concepts clearly',
+        'Data Interpretation': 'Practice reading charts and graphs quickly',
+        'Reading Comprehension': 'Improve reading speed and comprehension',
+        'Logical Reasoning': 'Practice more puzzle-solving techniques'
+    };
+    
+    flaggedContainer.innerHTML = weakTopics.map(topic => {
+        const suggestion = suggestions[topic] || 'Dedicate extra practice time to this topic';
+        return `
+            <div class="flagged-topic">
+                <div class="flagged-topic-name">${topic}</div>
+                <p class="flagged-topic-suggestion">${suggestion}</p>
+            </div>
+        `;
+    }).join('');
+}
+
+function setupMockTests() {
+    // Initialize practice tests
+    initializePracticeTests();
+}
+
+function refreshMockTests() {
+    // Refresh practice tests if needed
+    initializePracticeTests();
+}
+
+// ======= ENHANCED MOCK TEST SYSTEM =======
+
+// Test Questions Database
+const testQuestions = {
+    average: [
+        {
+            question: "Find the average of the first 10 natural numbers.",
+            options: ["4.5", "5", "5.5", "6"],
+            correct: 2,
+            explanation: "Sum = 1+2+...+10 = 10(11)/2 = 55. Average = 55/10 = 5.5"
+        },
+        {
+            question: "The average of 5 numbers is 20. What is their sum?",
+            options: ["80", "90", "100", "110"],
+            correct: 2,
+            explanation: "Sum = Average × Count = 20 × 5 = 100"
+        },
+        {
+            question: "The average of 10 numbers is 15. If one number is excluded, the average becomes 14. What is the excluded number?",
+            options: ["24", "25", "26", "28"],
+            correct: 1,
+            explanation: "Sum of 10 numbers = 15 × 10 = 150. Sum of 9 numbers = 14 × 9 = 126. Excluded number = 150 - 126 = 24"
+        }
+    ],
+    timeDistance: [
+        {
+            question: "A car travels 120 km in 2 hours. Find its speed in km/h.",
+            options: ["50", "55", "60", "65"],
+            correct: 2,
+            explanation: "Speed = Distance/Time = 120/2 = 60 km/h"
+        },
+        {
+            question: "Convert 72 km/hr to m/s.",
+            options: ["15", "18", "20", "25"],
+            correct: 2,
+            explanation: "72 km/hr = 72 × (5/18) = 20 m/s"
+        }
+    ],
+    percentage: [
+        {
+            question: "What is 25% of 80?",
+            options: ["15", "20", "25", "30"],
+            correct: 1,
+            explanation: "25% of 80 = (25/100) × 80 = 20"
+        },
+        {
+            question: "If a number is increased by 20% and then decreased by 20%, what is the net change?",
+            options: ["0%", "4% decrease", "4% increase", "2% decrease"],
+            correct: 1,
+            explanation: "Net change = 20 - 20 - (20×20)/100 = -4% (4% decrease)"
+        }
+    ]
+};
+
+// Topic-wise test configuration
+const topicTests = [
+    { id: 'average', name: 'Average', questions: 3, time: 5, difficulty: 'easy', icon: '📊' },
+    { id: 'timeDistance', name: 'Time & Distance', questions: 2, time: 5, difficulty: 'medium', icon: '🚗' },
+    { id: 'percentage', name: 'Percentage', questions: 2, time: 5, difficulty: 'medium', icon: '💯' },
+    { id: 'profitLoss', name: 'Profit & Loss', questions: 20, time: 25, difficulty: 'medium', icon: '💰' },
+    { id: 'timeWork', name: 'Time & Work', questions: 20, time: 25, difficulty: 'medium', icon: '⏰' },
+    { id: 'ratio', name: 'Ratio & Proportion', questions: 20, time: 20, difficulty: 'easy', icon: '⚖️' },
+    { id: 'simpleInterest', name: 'SI & CI', questions: 20, time: 25, difficulty: 'medium', icon: '🏦' },
+    { id: 'lcmHcf', name: 'LCM & HCF', questions: 20, time: 20, difficulty: 'easy', icon: '🔢' }
+];
+
+// Full mock tests
+const mockTests = [
+    { id: 'mock1', name: 'Full Length Mock Test 1', questions: 60, time: 60, difficulty: 'hard', icon: '🏆' },
+    { id: 'mock2', name: 'Full Length Mock Test 2', questions: 60, time: 60, difficulty: 'hard', icon: '🏆' },
+    { id: 'mock3', name: 'Final Mock Test - Exam Ready', questions: 60, time: 60, difficulty: 'hard', icon: '🏆' }
+];
+
+// Test State
+let currentTest = null;
+let currentQuestionIndex = 0;
+let userAnswers = [];
+let markedForReview = [];
+let testTimer = null;
+let timeRemaining = 0;
+let testStartTime = null;
+
+// Initialize tests on page load
+function initializePracticeTests() {
+    // Load topic tests
+    const topicTestsContainer = document.getElementById('topic-tests-grid');
+    if (topicTestsContainer) {
+        topicTestsContainer.innerHTML = topicTests.map(test => createTestCardHTML(test)).join('');
+    }
+
+    // Load mock tests
+    const mockTestsContainer = document.getElementById('full-mock-tests-grid');
+    if (mockTestsContainer) {
+        mockTestsContainer.innerHTML = mockTests.map(test => createTestCardHTML(test)).join('');
+    }
+}
+
+function createTestCardHTML(test) {
+    const available = testQuestions[test.id] && testQuestions[test.id].length > 0;
+    return `
+        <div class="test-card ${available ? '' : 'disabled'}" onclick="${available ? `startPracticeTest('${test.id}')` : ''}">
+            <h3>${test.icon} ${test.name}</h3>
+            <div class="test-card-meta">
+                <span>📝 ${test.questions} Questions</span>
+                <span>⏱️ ${test.time} mins</span>
+            </div>
+            <span class="test-difficulty ${test.difficulty}">${test.difficulty.toUpperCase()}</span>
+            ${!available ? '<p style="margin-top: 12px; color: #6b7280; font-size: 12px;">Questions coming soon!</p>' : ''}
+        </div>
+    `;
+}
+
+window.startPracticeTest = function(testId) {
+    const test = [...topicTests, ...mockTests].find(t => t.id === testId);
+    if (!test) return;
+
+    const questions = testQuestions[testId];
+    if (!questions || questions.length === 0) {
+        alert('Questions for this test are being prepared!');
+        return;
+    }
+
+    currentTest = test;
+    currentTest.questions = questions.length;
+    currentQuestionIndex = 0;
+    userAnswers = new Array(questions.length).fill(null);
+    markedForReview = new Array(questions.length).fill(false);
+    timeRemaining = test.time * 60;
+    testStartTime = Date.now();
+
+    // Hide tests list, show interface
+    document.querySelector('.practice-tests-section').style.display = 'none';
+    document.querySelector('.full-mock-tests-section').style.display = 'none';
+    document.querySelector('.mock-tests-intro').style.display = 'none';
+    document.getElementById('test-interface').style.display = 'block';
+
+    loadCurrentQuestion();
+    startTestTimer();
+}
+
+function loadCurrentQuestion() {
+    const questions = testQuestions[currentTest.id];
+    if (!questions) return;
+
+    const question = questions[currentQuestionIndex];
+
+    document.getElementById('test-title-header').textContent = currentTest.name;
+    document.getElementById('test-progress-display').textContent = 
+        `Question ${currentQuestionIndex + 1}/${questions.length}`;
+
+    document.getElementById('question-container').innerHTML = `
+        <p><strong>Q${currentQuestionIndex + 1}.</strong> ${question.question}</p>
+    `;
+
+    const optionsHTML = question.options.map((option, index) => `
+        <div class="option-item ${userAnswers[currentQuestionIndex] === index ? 'selected' : ''} 
+                    ${markedForReview[currentQuestionIndex] ? 'marked-review' : ''}" 
+             onclick="selectOption(${index})">
+            <strong>${String.fromCharCode(65 + index)}.</strong> ${option}
+        </div>
+    `).join('');
+
+    document.getElementById('options-container').innerHTML = optionsHTML;
+}
+
+window.selectOption = function(index) {
+    userAnswers[currentQuestionIndex] = index;
+    loadCurrentQuestion();
+}
+
+window.previousQuestion = function() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadCurrentQuestion();
+    }
+}
+
+window.nextQuestion = function() {
+    const questions = testQuestions[currentTest.id];
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        loadCurrentQuestion();
+    }
+}
+
+window.markForReview = function() {
+    markedForReview[currentQuestionIndex] = !markedForReview[currentQuestionIndex];
+    loadCurrentQuestion();
+}
+
+function startTestTimer() {
+    testTimer = setInterval(() => {
+        timeRemaining--;
+        const mins = Math.floor(timeRemaining / 60);
+        const secs = timeRemaining % 60;
+        document.getElementById('test-timer-display').textContent = 
+            `⏱️ Time: ${mins}:${secs.toString().padStart(2, '0')}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(testTimer);
+            submitTest();
+        }
+    }, 1000);
+}
+
+window.exitTest = function() {
+    if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
+        clearInterval(testTimer);
+        backToTests();
+    }
+}
+
+window.submitTest = function() {
+    if (!confirm('Are you sure you want to submit the test?')) {
+        return;
+    }
+
+    clearInterval(testTimer);
+
+    const questions = testQuestions[currentTest.id];
+    let correct = 0, wrong = 0, unanswered = 0;
+
+    userAnswers.forEach((answer, index) => {
+        if (answer === null) {
+            unanswered++;
+        } else if (answer === questions[index].correct) {
+            correct++;
+        } else {
+            wrong++;
+        }
+    });
+
+    const percentage = Math.round((correct / questions.length) * 100);
+    const timeTaken = Math.floor((Date.now() - testStartTime) / 1000);
+    const timeMins = Math.floor(timeTaken / 60);
+    const timeSecs = timeTaken % 60;
+
+    // Show results
+    document.getElementById('test-interface').style.display = 'none';
+    document.getElementById('test-results-page').style.display = 'block';
+
+    document.getElementById('final-score-percentage').textContent = percentage + '%';
+    document.getElementById('performance-message').textContent = 
+        percentage >= 75 ? '🎉 Excellent Performance!' : 
+        percentage >= 50 ? '👍 Good Job! Keep Practicing!' : 
+        '📚 Keep Practicing - You Can Do Better!';
+
+    document.getElementById('correct-answers-count').textContent = correct;
+    document.getElementById('wrong-answers-count').textContent = wrong;
+    document.getElementById('unanswered-count').textContent = unanswered;
+    document.getElementById('time-taken').textContent = `${timeMins}:${timeSecs.toString().padStart(2, '0')}`;
+
+    // Save result to state
+    saveTestResult(currentTest.id, percentage, correct, wrong, unanswered);
+}
+
+function saveTestResult(testId, score, correct, wrong, unanswered) {
+    if (!appState.testResults) {
+        appState.testResults = [];
+    }
+    appState.testResults.push({
+        testId,
+        testName: currentTest.name,
+        score,
+        correct,
+        wrong,
+        unanswered,
+        date: new Date().toISOString(),
+        timestamp: Date.now()
+    });
+    saveAppState();
+}
+
+window.retakeTest = function() {
+    document.getElementById('test-results-page').style.display = 'none';
+    startPracticeTest(currentTest.id);
+}
+
+window.backToTests = function() {
+    document.getElementById('test-interface').style.display = 'none';
+    document.getElementById('test-results-page').style.display = 'none';
+    document.querySelector('.practice-tests-section').style.display = 'block';
+    document.querySelector('.full-mock-tests-section').style.display = 'block';
+    document.querySelector('.mock-tests-intro').style.display = 'block';
+}
+
+window.reviewAnswers = function() {
+    alert('Review feature: Shows all questions with your answers and correct answers. Coming in next update!');
+}
+
+// Initialize practice tests when mock tests section is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        initializePracticeTests();
+    }, 100);
+});
+
+// Utility functions for state management
+function saveAppState() {
+    try {
+        localStorage.setItem('aptitudeTrackerState', JSON.stringify(appState));
+        console.log('State saved to localStorage:', appState);
+    } catch (e) {
+        console.error('Failed to save state:', e);
+    }
+}
+
+function loadAppState() {
+    try {
+        const savedState = localStorage.getItem('aptitudeTrackerState');
+        if (savedState) {
+            const parsed = JSON.parse(savedState);
+            // Merge saved state with current state
+            appState.currentWeek = parsed.currentWeek || 1;
+            appState.currentSection = parsed.currentSection || 'dashboard';
+            appState.completedTasks = parsed.completedTasks || {};
+            appState.taskNotes = parsed.taskNotes || {};
+            appState.topicRatings = parsed.topicRatings || {};
+            appState.mockTests = parsed.mockTests || [];
+            appState.studyHours = parsed.studyHours || 0;
+            appState.studyStreak = parsed.studyStreak || 0;
+            appState.lastStudyDate = parsed.lastStudyDate || null;
+            appState.startDate = parsed.startDate || new Date().toISOString().split('T')[0];
+            appState.testResults = parsed.testResults || [];
+            console.log('State loaded from localStorage:', appState);
+        }
+    } catch (e) {
+        console.error('Failed to load state:', e);
+    }
+}
+
+function refreshDashboard() {
+    updateStats();
+    generateWeeksOverview();
+    updateCurrentWeekHighlight();
+    setDailyQuote();
+}
+
+// Utility function to reset all progress
+window.resetAllProgress = function() {
+    const confirmed = confirm('⚠️ WARNING: This will delete ALL your progress!\n\n' +
+        '• All completed tasks\n' +
+        '• Study hours and streak\n' +
+        '• Notes and ratings\n' +
+        '• Test scores\n\n' +
+        'This action CANNOT be undone!\n\n' +
+        'Are you absolutely sure?');
+    
+    if (confirmed) {
+        const doubleCheck = confirm('Last chance! Click OK to permanently delete all data.');
+        if (doubleCheck) {
+            localStorage.removeItem('aptitudeTrackerState');
+            alert('✓ All progress has been reset. The page will now reload.');
+            location.reload();
+        }
+    }
+}
+
+// Keep the console version for debugging
+window.resetProgress = function() {
+    window.resetAllProgress();
+}
+
+// Debug function to view current state
+window.viewProgress = function() {
+    console.log('Current State:', appState);
+    console.log('Completed Tasks:', Object.keys(appState.completedTasks).length);
+    console.log('Study Hours:', appState.studyHours);
+    console.log('Study Streak:', appState.studyStreak);
+    return appState;
+}
+    </script>
+</body>
+</html>
